@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".MainActivity">
+
+    <!-- Title -->
+
+    <!-- Subheading -->
+    <TextView
+            android:id="@+id/loginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="48dp"
+            app:layout_constraintHorizontal_bias="0.08" />
+
+    <TextView
+            android:id="@+id/loginSubheading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="We will use this info to contact you regarding booking confirmations."
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/loginTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp" />
+
+    <!-- Phone Number Input Field -->
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/loginSubheading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp">
+
+        <EditText
+                android:id="@+id/editTextCountryCode"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="+92"
+                android:inputType="phone"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:textColorHint="@color/gray" />
+
+        <EditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="3XXXXXXXXX"
+                android:inputType="phone"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:textColorHint="@color/gray"
+                android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+    <!-- Sign Up Link -->
+
+    <!-- Corporate User Button -->
+    <Button
+            android:id="@+id/buttonCorporateLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Corporate User? Login Here"
+            android:backgroundTint="@color/lightpurple"
+            android:textColor="@color/purple"
+            android:textSize="11sp"
+            android:gravity="start|center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/textViewSignUp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp"
+            android:padding="20dp"
+            app:layout_constraintEnd_toStartOf="@id/buttonInsuredLogin" />
+
+    <!-- Insured User Button -->
+    <Button
+            android:id="@+id/buttonInsuredLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Insured User? Login Here"
+            android:backgroundTint="@color/lightgreen"
+            android:textColor="@color/green"
+            android:textSize="11sp"
+            android:gravity="start|center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/textViewSignUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            android:padding="20dp"
+            app:layout_constraintStart_toEndOf="@id/buttonCorporateLogin" />
+
+    <!-- Next Button -->
+
+    <!-- Skip Button -->
+
+    <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="356dp"
+            android:layout_height="48dp"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/darkblue"
+            android:textSize="16sp"
+            android:layout_marginTop="288dp"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/buttonCorporateLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/rounded_border"
+            app:layout_constraintHorizontal_bias="0.555" />
+
+    <Button
+            android:id="@+id/buttonSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip"
+            android:textColor="@color/blue"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@id/buttonNext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"
+            app:layout_constraintHorizontal_bias="0.498" />
+
+    <TextView
+            android:id="@+id/textViewSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not a user?"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="244dp"
+            android:layout_marginStart="32dp" />
+
+    <TextView
+            android:id="@+id/textViewSignUp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textSize="14sp"
+            android:textColor="@color/darkblue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="244dp"
+            android:layout_marginStart="108dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
