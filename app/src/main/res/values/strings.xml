@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">UIOnlyApp</string>
+    <string name="app_name">Healthwire</string>
+    <string name="healthwire">Healthwire</string>
+    <string name="scheduled_orders">Scheduled Orders</string>
 </resources>

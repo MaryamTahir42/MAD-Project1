@@ -8,9 +8,6 @@
         android:background="@color/white"
         tools:context=".MainActivity">
 
-    <!-- Title -->
-
-    <!-- Subheading -->
     <TextView
             android:id="@+id/createAccountTitle"
             android:layout_width="wrap_content"
@@ -39,7 +36,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp" />
 
-    <!-- Name Input Field -->
+
     <EditText
             android:id="@+id/editTextName"
             android:layout_width="0dp"
@@ -89,11 +86,6 @@
             android:layout_marginEnd="32dp"
             android:layout_marginTop="16dp" />
 
-    <!-- Login Text -->
-
-    <!-- Next Button -->
-
-    <!-- Skip Button -->
 
     <TextView
             android:id="@+id/textViewLogin"
@@ -137,5 +129,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

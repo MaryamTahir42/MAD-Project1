@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#808080</color>
+    <color name="lightgray">#8CEBE9E9</color>
     <color name="blue">#0000FF</color>
     <color name="light_blue">#c0d1eb</color>
     <color name="darkblue">#020c33</color>
@@ -16,6 +17,7 @@
     <color name="green">#12704b</color>
     <color name="orange">#9e4b0b</color>
     <color name="pink"> #f5c5ab</color>
+    <color name="red">#DB0A0A</color>
 
     <color name="lightgreen">#a5e8d7</color>
 

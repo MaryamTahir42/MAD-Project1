@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".MainActivity">
+
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Menu"
+                    android:id="@+id/Menu"
+                    android:textAlignment="textStart"
+                    android:background="@color/white"
+                    android:textSize="27dp"
+                    android:padding="10dp"
+                    android:textColorHighlight="@color/darkblue"
+                    android:textColor="@color/darkblue"
+                    >
+
+            </TextView>
+            <!-- Search All Products -->
+            <LinearLayout
+                    android:id="@+id/SearchAllProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:padding="10dp"
+                    android:background="@color/lightgray"
+                    app:layout_constraintTop_toBottomOf="@id/orderMedicinesCard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                        android:id="@+id/referEarnIcon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/img_4"
+                        android:background="@color/white"
+                        />
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/nocredit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No Credit Available"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="12dp"
+                            />
+                    <TextView
+                            android:id="@+id/money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs. 0"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="12dp"
+                            />
+                </LinearLayout>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_arrow_forward_blue_24"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"/>
+
+            </LinearLayout>
+
+<!--add more-->
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Account Setings"
+                    android:id="@+id/account"
+                    android:textAlignment="textStart"
+                    android:background="@color/white"
+                    android:textSize="27dp"
+                    android:padding="10dp"
+                    android:textColorHighlight="@color/darkblue"
+                    android:textColor="@color/darkblue"
+                    >
+
+            </TextView>
+            <!-- notifications -->
+            <LinearLayout
+                    android:id="@+id/notifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:padding="10dp"
+                    android:background="@color/lightgray"
+                    app:layout_constraintTop_toBottomOf="@id/orderMedicinesCard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                        android:id="@+id/bell"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_notifications_none_24"
+                        android:background="@color/darkblue"
+                        />
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/notification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notifications"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="12dp"
+                            />
+
+                </LinearLayout>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_arrow_forward_blue_24"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"/>
+
+            </LinearLayout>
+            <!-- Personal info -->
+            <LinearLayout
+                    android:id="@+id/pinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:padding="10dp"
+                    android:background="@color/lightgray"
+                    app:layout_constraintTop_toBottomOf="@id/orderMedicinesCard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                        android:id="@+id/person"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_person_24"
+                        android:background="@color/white"
+                        />
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/pinfotext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Personal Information"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="12dp"
+                            />
+
+                </LinearLayout>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_arrow_forward_blue_24"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"/>
+
+            </LinearLayout>
+            <!-- Saved Address -->
+            <LinearLayout
+                    android:id="@+id/savedinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:padding="10dp"
+                    android:background="@color/lightgray"
+                    app:layout_constraintTop_toBottomOf="@id/orderMedicinesCard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                        android:id="@+id/saved"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_person_24"
+                        android:background="@color/white"
+                        />
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/savedinfotext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Saved Addresses"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="12dp"
+                            />
+
+                </LinearLayout>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_arrow_forward_blue_24"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"/>
+
+            </LinearLayout>
+
+
+            <!--add more2222222222-->
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your Activity"
+                    android:id="@+id/Activity"
+                    android:textAlignment="textStart"
+                    android:background="@color/white"
+                    android:textSize="27dp"
+                    android:padding="10dp"
+                    android:textColorHighlight="@color/darkblue"
+                    android:textColor="@color/darkblue"
+                    >
+
+            </TextView>
+            <!-- notifications -->
+            <LinearLayout
+                    android:id="@+id/PharmSchedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:padding="10dp"
+                    android:background="@color/lightgray"
+                    app:layout_constraintTop_toBottomOf="@id/orderMedicinesCard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                        android:id="@+id/cal"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_notifications_none_24"
+                        android:background="@color/darkblue"
+                        />
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/pharmsche"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pharmacy Schedule"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="12dp"
+                            />
+
+                </LinearLayout>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_arrow_forward_blue_24"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"/>
+
+            </LinearLayout>
+            <!-- Personal info -->
+            <LinearLayout
+                    android:id="@+id/Appoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:padding="10dp"
+                    android:background="@color/lightgray"
+                    app:layout_constraintTop_toBottomOf="@id/orderMedicinesCard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                        android:id="@+id/cal2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_person_24"
+                        android:background="@color/white"
+                        />
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/apptext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Appointments"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="12dp"
+                            />
+
+                </LinearLayout>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_arrow_forward_blue_24"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

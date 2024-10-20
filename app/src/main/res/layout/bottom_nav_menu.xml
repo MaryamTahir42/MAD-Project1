@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/navigation_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home" />
+    <item
+            android:id="@+id/navigation_pharmacy"
+            android:icon="@drawable/baseline_local_pharmacy_24"
+            android:title="Pharmacy" />
+    <item
+            android:id="@+id/navigation_search"
+            android:icon="@drawable/baseline_search_24"
+            android:title="Home" />
+    <item
+            android:id="@+id/navigation_cart"
+            android:icon="@drawable/baseline_shopping_cart_24"
+            android:title="Pharmacy" />
+    <item
+            android:id="@+id/navigation_ham"
+            android:icon="@drawable/baseline_menu_24"
+            android:title="Home" />
+
+</menu>

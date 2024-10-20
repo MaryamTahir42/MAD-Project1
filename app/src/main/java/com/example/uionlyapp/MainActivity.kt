@@ -3,15 +3,15 @@ package com.example.uionlyapp
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    // Variables for the Login Layout (activity_login.xml)
+    // Variables for activity_login.xml
     private lateinit var editTextName: EditText
     private lateinit var editTextPhoneNumber: EditText
     private lateinit var buttonNext: Button
@@ -19,11 +19,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var textViewLogin: TextView
     private lateinit var textViewSignUp: TextView
 
-    // Variables for the Second Login Layout (activity_login2.xml)
+    // Variables for activity_login2.xml
     private lateinit var buttonCorporateLogin: Button
     private lateinit var buttonInsuredLogin: Button
 
-    // Variables for the Dashboard Layout (activity_dashboard.xml)
+    // Variables for activity_dashboard.xml
     private lateinit var greetingText: TextView
     private lateinit var currentCityText: TextView
     private lateinit var searchBar: EditText
@@ -35,25 +35,27 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Initially set the content to the login layout
+        // Set the initial view for the "Home" screen
         setContentView(R.layout.activity_login)
-
-        // Initialize the views for the login screen
         setupLoginLayout()
 
-        // Set up logic to switch between layouts if needed
-        textViewLogin.setOnClickListener {
-            Toast.makeText(this, "Navigating to Login", Toast.LENGTH_SHORT).show()
-            // Switch to the second layout (activity_login2.xml)
-            setContentView(R.layout.activity_login2)
-            setupLogin2Layout()
-        }
+        // Set up the BottomNavigationView for navigation
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-        textViewSignUp.setOnClickListener {
-            Toast.makeText(this, "Navigating to Dashboard", Toast.LENGTH_SHORT).show()
-            // Switch to the dashboard layout (activity_dashboard.xml)
-            setContentView(R.layout.activity_dashboard)
-            setupDashboardLayout()
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_home -> {
+                    setContentView(R.layout.activity_login)
+                    setupLoginLayout() // Reapply the home logic
+                    true
+                }
+                R.id.navigation_pharmacy -> {
+                    setContentView(R.layout.pharmacy)
+                    setupPharmacyLayout()
+                    true
+                }
+                else -> false
+            }
         }
     }
 
@@ -66,19 +68,16 @@ class MainActivity : AppCompatActivity() {
         textViewLogin = findViewById(R.id.textViewLogin)
         textViewSignUp = findViewById(R.id.textViewSignUp)
 
-        buttonNext.setOnClickListener {
-            val name = editTextName.text.toString()
-            val phoneNumber = editTextPhoneNumber.text.toString()
-
-            if (name.isNotEmpty() && phoneNumber.isNotEmpty()) {
-                Toast.makeText(this, "Proceeding with Next", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "Please enter all fields", Toast.LENGTH_SHORT).show()
-            }
+        textViewLogin.setOnClickListener {
+            Toast.makeText(this, "Navigating to Login", Toast.LENGTH_SHORT).show()
+            setContentView(R.layout.activity_login2)
+            setupLogin2Layout()
         }
 
-        buttonSkip.setOnClickListener {
-            Toast.makeText(this, "Skipped account creation", Toast.LENGTH_SHORT).show()
+        textViewSignUp.setOnClickListener {
+            Toast.makeText(this, "Navigating to Dashboard", Toast.LENGTH_SHORT).show()
+            setContentView(R.layout.activity_dashboard)
+            setupDashboardLayout()
         }
     }
 
@@ -86,8 +85,6 @@ class MainActivity : AppCompatActivity() {
     private fun setupLogin2Layout() {
         buttonCorporateLogin = findViewById(R.id.buttonCorporateLogin)
         buttonInsuredLogin = findViewById(R.id.buttonInsuredLogin)
-        buttonNext = findViewById(R.id.buttonNext)
-        buttonSkip = findViewById(R.id.buttonSkip)
 
         buttonCorporateLogin.setOnClickListener {
             Toast.makeText(this, "Corporate Login", Toast.LENGTH_SHORT).show()
@@ -95,14 +92,6 @@ class MainActivity : AppCompatActivity() {
 
         buttonInsuredLogin.setOnClickListener {
             Toast.makeText(this, "Insured Login", Toast.LENGTH_SHORT).show()
-        }
-
-        buttonNext.setOnClickListener {
-            Toast.makeText(this, "Proceeding with Next", Toast.LENGTH_SHORT).show()
-        }
-
-        buttonSkip.setOnClickListener {
-            Toast.makeText(this, "Skipped", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -116,11 +105,9 @@ class MainActivity : AppCompatActivity() {
         referEarnSubText = findViewById(R.id.referEarnSubText)
         orderMedicinesCard = findViewById(R.id.orderMedicinesCard)
 
-        // Set up greeting and current city text
         greetingText.text = "Hello Maryam"
         currentCityText.text = "Current City: Lahore"
 
-        // Set up listeners for dashboard elements
         referEarnLayout.setOnClickListener {
             Toast.makeText(this, "Refer & Earn Clicked", Toast.LENGTH_SHORT).show()
         }
@@ -128,5 +115,13 @@ class MainActivity : AppCompatActivity() {
         orderMedicinesCard.setOnClickListener {
             Toast.makeText(this, "Order Medicines Card Clicked", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    // Function to handle the pharmacy layout (pharmacy.xml)
+    private fun setupPharmacyLayout() {
+        // Handle pharmacy-specific actions here, such as setting up click listeners
+        // and interacting with the UI components of pharmacy.xml.
+        val searchBar = findViewById<EditText>(R.id.searchBar)
+        searchBar.hint = "Search for Medicines"
     }
 }

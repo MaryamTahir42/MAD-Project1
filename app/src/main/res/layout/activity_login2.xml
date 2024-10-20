@@ -8,9 +8,7 @@
         android:background="@color/white"
         tools:context=".MainActivity">
 
-    <!-- Title -->
 
-    <!-- Subheading -->
     <TextView
             android:id="@+id/loginTitle"
             android:layout_width="wrap_content"
@@ -39,7 +37,6 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp" />
 
-    <!-- Phone Number Input Field -->
     <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -77,9 +74,6 @@
 
     </LinearLayout>
 
-    <!-- Sign Up Link -->
-
-    <!-- Corporate User Button -->
     <Button
             android:id="@+id/buttonCorporateLogin"
             android:layout_width="0dp"
@@ -97,7 +91,6 @@
             android:padding="20dp"
             app:layout_constraintEnd_toStartOf="@id/buttonInsuredLogin" />
 
-    <!-- Insured User Button -->
     <Button
             android:id="@+id/buttonInsuredLogin"
             android:layout_width="0dp"
@@ -115,9 +108,6 @@
             android:padding="20dp"
             app:layout_constraintStart_toEndOf="@id/buttonCorporateLogin" />
 
-    <!-- Next Button -->
-
-    <!-- Skip Button -->
 
     <Button
             android:id="@+id/buttonNext"
