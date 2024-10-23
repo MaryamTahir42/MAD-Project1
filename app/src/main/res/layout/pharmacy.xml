@@ -47,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/scheduled_orders"
                     android:textSize="15sp"
-                    android:textColor="white"
+                    android:textColor="@color/white"
                     android:padding="5dp"
                     android:paddingStart="5dp"
                     android:paddingEnd="6dp"
